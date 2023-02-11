@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href ="new_calc_style.css">
+</head>
+<body>
+    <section>
+        <center>
+            <table class="border border-primary m-5">
+                <tr>
+                    <td colspan="4" class="result px-5"><input class="inputBox" type="display" name="textbox" id="result"></td>
+                </tr>
+                
+                <tr>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-danger" id="ac" value="seven" onClick="clearScreen()">AC</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="parentheses_open" value="!" onClick="display('!')">!</button></td>
+                    <!-- <td class="calc px-5"><button class="btn btn-outline-primary" id="zero" value="0" onClick="display('0')">0</button></td> -->
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="percentage" value="%" onClick="percentage()">%</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="divide" value="/" onClick="display('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td class="calc ps-2 pe-2 "><button class="btn btn-outline-primary" id="seven" value="7" onClick="display('7')">7</button></td>
+                    <td class="calc ps-2 pe-2 "><button class="btn btn-outline-primary" id="eight" value="8" onClick="display('8')">8</button></td>
+                    <td class="calc ps-2 pe-2 "><button class="btn btn-outline-primary" id="nine" value="9" onClick="display('9')">9</button></td>
+                    <td class="calc ps-2 pe-2 "><button class="btn btn-outline-success" id="multiply" value="x" onClick="display('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-primary" id="four" value="4" onClick="display('4')">4</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-primary" id="five" value="5" onClick="display('5')">5</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-primary" id="six" value="6" onClick="display('6')">6</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="substact" value="-" onClick="display('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-primary" id="one" value="1" onClick="display('1')">1</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-primary" id="two" value="2" onClick="display('2')">2</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-primary" id="one" value="3" onClick="display('3')">3</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="add" value="+" onClick="display('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="parentheses_open" value="(" onClick="display('(')">(</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="parentheses_close" value=")" onClick="display(')')">)</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="decimal_point" value="." onClick="display('.')">.</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-dark" onclick="calculation()">=</button></td>
+                </tr>
+                <tr>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-primary" id="zero" value="0" onClick="display('0')">0</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="power" value="^" onClick="display('^')">^</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-success" id="log" value="Log" onClick="display('log')">log</button></td>
+                    <td class="calc ps-2 pe-2"><button class="btn btn-outline-danger" id="clear" value="Clear" onClick="back()">C</button></td>
+                </tr>
+            </table>
+        </center>
+    </section>
+    <script src="new_calc.js"></script>
+</body>
+</html>
